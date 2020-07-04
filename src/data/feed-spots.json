@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "id": "961",
+      "name": "Test spot 1",
+      "specie": "Cat",
+      "animalsCount": 20,
+      "coordinates": [32.1340522, 34.8721972]
+    },
+    {
+      "id": "962",
+      "name": "Test spot 2",
+      "specie": "Dog",
+      "animalsCount": 30,
+      "coordinates": [32.1373468, 34.8742481]
+    },
+    {
+      "id": "963",
+      "name": "Test spot 3",
+      "specie": "Cat",
+      "animalsCount": 10,
+      "coordinates": [32.1608935, 34.904076]
+    }
+  ]
+}

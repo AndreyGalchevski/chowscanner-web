@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
 
-function App() {
+import "./App.css";
+
+import Navigation from "./features/layout/Navigation";
+import MainMap from "./features/feedSpot/MainMap";
+import About from "./features/about/About";
+import Contact from "./features/contact/Contact";
+
+const App = () => {
+  const { pathname } = useLocation();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation showSearchBar={pathname === "/"} />
+      <Switch>
+        <Route exact path="/" component={MainMap} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;
